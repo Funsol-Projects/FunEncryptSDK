@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("maven-publish")
 }
 
 android {
@@ -46,3 +47,20 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                groupId = "com.github.Funsol-Projects"
+                artifactId = "FunEncryptSDK"
+                version = "1.0"
+
+                artifact(file("libs/funsolauthenticationsdk-release.aar")) {
+                    extension = "aar"
+                }
+            }
+        }
+    }
+}
+

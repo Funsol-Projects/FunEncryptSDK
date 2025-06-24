@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "FunEncryptSDK"
 include(":app")
+include(":FunEncryptSDK")
  
