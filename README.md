@@ -29,7 +29,9 @@ Add FunEncryptSDK dependency in App level build.gradle.
 Directly just initialize it and it will return you the encrypted token.
 
     GetEncryptedToken.getToken {
-    //this callback will return the encrypted token
+    
+        //this callback will return the encrypted token
+    
     }
 
 ## License
