@@ -1,12 +1,12 @@
-FunEncryptSDK (SDK to encrypt api token)
+# FunEncryptSDK (SDK to encrypt API token)
 
 [![](https://jitpack.io/v/Funsol-Projects/FunEncryptSDK.svg)](https://jitpack.io/#Funsol-Projects/FunEncryptSDK)
 
 FunEncryptSDK is a token encryption library that is used to encrypt API tokens. Developers can easily integrate this dependency in their projects and encrypt their API tokens for better security.
 
-Getting Started
+## Getting Started
 
-Step 1
+### Step 1
 
 Add maven repository in project level build.gradle or in latest project setting.gradle file
 
@@ -16,7 +16,7 @@ Add maven repository in project level build.gradle or in latest project setting.
         maven { url "https://jitpack.io" }
     }
  
-Step 2
+### Step 2
 
 Add FunEncryptSDK dependency in App level build.gradle.
 
@@ -24,7 +24,7 @@ Add FunEncryptSDK dependency in App level build.gradle.
         implementation 'com.github.Funsol-Projects:FunEncryptSDK:v1.0'
     }
 
-Step 3
+### Step 3
 
 Directly just initialize it and it will return you the encrypted token.
 
@@ -32,7 +32,9 @@ Directly just initialize it and it will return you the encrypted token.
     //this callback will return the encrypted token
     }
 
-License
+## License
+
+MIT License
 
 Copyright (c) [2025]
 
