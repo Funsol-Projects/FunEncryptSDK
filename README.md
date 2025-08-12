@@ -1,4 +1,4 @@
-# FunEncryptSDK (SDK to encrypt API token)
+# FunEncryptSDK (SDK to get all Headers along with the Encrypted API token)
 
 [![](https://jitpack.io/v/Funsol-Projects/FunEncryptSDK.svg)](https://jitpack.io/#Funsol-Projects/FunEncryptSDK)
 
