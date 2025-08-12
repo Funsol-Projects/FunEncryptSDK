@@ -2,7 +2,7 @@
 
 [![](https://jitpack.io/v/Funsol-Projects/FunEncryptSDK.svg)](https://jitpack.io/#Funsol-Projects/FunEncryptSDK)
 
-FunEncryptSDK is a token encryption library that is used to encrypt API tokens. Developers can easily integrate this dependency in their projects and encrypt their API tokens for better security.
+FunEncryptSDK is a library which returns the encrypted API token along with all the required headers for the API call. Developers can easily integrate this dependency in their projects and encrypt their API tokens for better security and get all the required Headers.
 
 ## Getting Started
 
@@ -26,13 +26,20 @@ Add FunEncryptSDK dependency in App level build.gradle.
 
 ### Step 3
 
-Directly just initialize it and it will return you the encrypted token.
+Directly just initialize it and it will return you the headers map. Pass that headers map into your API call.
 
-    GetEncryptedToken.getToken {
+    GetEncryptedHeaders.getHeaders(context, remoteKey) {
     
-        //this callback will return the encrypted token
+        //this callback will return all the required headers along with the encrypted token inside a HeadersMap
     
-    }
+    } 
+
+### Step 4
+
+Example API Call function. This is how you will make parameter for the HeadersMap inside your API call function and then pass the HeadersMap which you got in return from the above getHeaders method.
+
+    @GET("users")
+    fun getUsers(@HeaderMap headers: Map<String, String?>?): Call<Response>
 
 ## License
 
