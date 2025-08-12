@@ -54,7 +54,7 @@ afterEvaluate {
             create<MavenPublication>("release") {
                 groupId = "com.github.Funsol-Projects"
                 artifactId = "FunEncryptSDK"
-                version = "1.0"
+                version = "1.1"
 
                 artifact(file("libs/funsolauthenticationsdk-release.aar")) {
                     extension = "aar"
@@ -63,4 +63,5 @@ afterEvaluate {
         }
     }
 }
+
 
