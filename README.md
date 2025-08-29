@@ -21,7 +21,7 @@ Add maven repository in project level build.gradle or in latest project setting.
 Add FunEncryptSDK dependency in App level build.gradle.
 
     dependencies {
-        implementation 'com.github.Funsol-Projects:FunEncryptSDK:v1.0'
+        implementation 'com.github.Funsol-Projects:FunEncryptSDK:v1.1'
     }
 
 ### Step 3
