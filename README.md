@@ -21,17 +21,24 @@ Add maven repository in project level build.gradle or in latest project setting.
 Add FunEncryptSDK dependency in App level build.gradle.
 
     dependencies {
-        implementation 'com.github.Funsol-Projects:FunEncryptSDK:v1.1'
+        implementation 'com.github.Funsol-Projects:FunEncryptSDK:v1.2'
     }
 
 ### Step 3
 
 Directly just initialize it and it will return you the headers map. Pass that headers map into your API call.
 
-    GetEncryptedHeaders.getHeaders(context, remoteKey) {
-    
-        //this callback will return all the required headers along with the encrypted token inside a HeadersMap
-    
+    GetEncryptedHeaders.getHeaders(context, remoteKey) { result ->
+                when (result) {
+                    is HeaderResult.Success -> {
+                        val headers = result.headers
+                        //this returns all the required headers along with the encrypted token inside a HeadersMap
+                    }
+
+                    is HeaderResult.Error -> {
+                        Log.e("HeadersTAG", "Error: ${result.type.message}", result.exception)
+                    }
+                }
     } 
 
 ### Step 4
